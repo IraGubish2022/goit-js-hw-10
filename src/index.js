@@ -30,7 +30,7 @@ function searchCountryInfo(event) {
     .catch(error => Notify.failure('Oops, there is no country with that name'));
 }
 
-function showCountryCard () {
+function showCountryCard (countries) {
   return countries
       .map(({ name, capital, flags, population, languages }) => {
         return `<div class="box"><img class="country-info-img" src="${
@@ -56,7 +56,7 @@ function showCountryCard () {
       .join('');
 }
 
-function showCountryList () {
+function showCountryList (countries) {
   return countries
       .map(({ name, flags }) => {
         return `<li class="country-item"><img class='flags' src="${flags.svg}" alt="${name.official}" width="50" height="40"><p class="country-name">${name.official}</p></li>`;
