@@ -31,7 +31,7 @@ function searchCountryInfo(event) {
 }
 
 function showCountryCard () {
-  const markupInfo = countries
+  return countries
       .map(({ name, capital, flags, population, languages }) => {
         return `<div class="box"><img class="country-info-img" src="${
           flags.svg
@@ -57,7 +57,7 @@ function showCountryCard () {
 }
 
 function showCountryList () {
-  const markup = countries
+  return countries
       .map(({ name, flags }) => {
         return `<li class="country-item"><img class='flags' src="${flags.svg}" alt="${name.official}" width="50" height="40"><p class="country-name">${name.official}</p></li>`;
       })
