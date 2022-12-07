@@ -68,10 +68,10 @@ function createMarkupCountry(countries) {
   if (countries.length > 10) {
     Notify.info('Too many matches found. Please enter a more specific name.');
   } else if (countries.length > 1) {
-    const markup = showCountryList ()
+    const markup = showCountryList (countries)
      updatePage ('', markup )
   } else if (countries.length === 1) {
-    const markupInfo = showCountryCard ()
+    const markupInfo = showCountryCard (countries)
      updatePage (markupInfo)
   }
 }
